@@ -42,7 +42,7 @@
 #define _ELIX_LEVEL 4
 
 /* The default printf functions is the double variant */
-#define _FORMAT_DEFAULT_DOUBLE
+#undef _FORMAT_DEFAULT_DOUBLE
 
 /* The default printf functions is the float variant */
 #undef _FORMAT_DEFAULT_FLOAT
@@ -51,7 +51,7 @@
 #undef _FORMAT_DEFAULT_INTEGER
 
 /* The default printf functions is the minimal variant */
-#undef _FORMAT_DEFAULT_MINIMAL
+#define _FORMAT_DEFAULT_MINIMAL
 
 #undef _FSEEK_OPTIMIZATION
 
