@@ -18,10 +18,10 @@
 #undef NEWLIB_GLOBAL_ERRNO
 
 /* use thread local storage */
-#define NEWLIB_TLS
+#undef NEWLIB_TLS
 
 /* use thread local storage */
-#define PICOLIBC_TLS
+#undef PICOLIBC_TLS
 
 /* Use open/close/read/write in tinystdio */
 #define POSIX_IO
