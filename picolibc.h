@@ -403,7 +403,8 @@
 
 #undef _REENT_GLOBAL_ATEXIT
 
-#define _RETARGETABLE_LOCKING
+/* @ivanv: All Microkit PDs are single-threaded and so we don't need retargetable locking. */
+#undef _RETARGETABLE_LOCKING
 
 #undef _UNBUF_STREAM_OPT
 
