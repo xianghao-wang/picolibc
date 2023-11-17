@@ -1,16 +1,9 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    // @ivanv: this is a bit of trouble, I wasn't expecting to have to duplicate the target.
-    const target = std.zig.CrossTarget{
-        .cpu_arch = .aarch64,
-        .cpu_model = .{ .explicit = &std.Target.arm.cpu.cortex_a53 },
-        .os_tag = .freestanding,
-        .abi = .none,
-    };
     const libc = b.addStaticLibrary(.{
         .name = "c",
-        .target = target,
+        .target = b.standardTargetOptions(.{}),
         .optimize = b.standardOptimizeOption(.{}),
     });
 
