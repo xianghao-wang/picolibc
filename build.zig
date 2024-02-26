@@ -3,7 +3,7 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const target = b.resolveTargetQuery(.{
         .cpu_arch = .aarch64,
-        .cpu_model = .{ .explicit = &std.Target.arm.cpu.cortex_a53 },
+        .cpu_model = .{ .explicit = &std.Target.arm.cpu.cortex_a55 },
         .os_tag = .freestanding,
         .abi = .none,
     });
@@ -387,6 +387,8 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/tinystdio/vwscanf.c",
             "newlib/libc/tinystdio/wprintf.c",
             "newlib/libc/tinystdio/wscanf.c",
+            "newlib/libc/tinystdio/fopen.c",
+            "newlib/libc/tinystdio/fdopen.c",
             "newlib/libc/signal/signal.c",
             // "newlib/libc/signal/psignal.c",
             "newlib/libc/reent/reent.c",
