@@ -421,6 +421,7 @@ pub fn build(b: *std.Build) void {
     libc.addIncludePath(.{ .path = "newlib/libc/signal" });
     libc.addIncludePath(.{ .path = "newlib/libc/sys" });
     libc.addIncludePath(.{ .path = "newlib/libc/locale" });
+    libc.addIncludePath(.{ .path = "nfs_extras/include" });
     const tinystdio = true;
     if (tinystdio) {
         libc.addIncludePath(.{ .path = "newlib/libc/tinystdio" });
