@@ -416,6 +416,7 @@ pub fn build(b: *std.Build) void {
             "extensions/getuid.c",
             "extensions/getgid.c",
             "extensions/close.c",
+            "extensions/ntohl.c",
             "extensions/internal/syscall_ret.c",
             "newlib/libc/ctype/isxdigit.c",
             "newlib/libc/time/time.c",
