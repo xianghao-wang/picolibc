@@ -412,6 +412,7 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/getauxval.c",
             "extensions/bind.c",
             "extensions/getpid.c",
+            "extensions/clock_gettime.c",
             "newlib/libc/ctype/isxdigit.c",
             "newlib/libc/time/time.c",
         },
@@ -426,6 +427,7 @@ pub fn build(b: *std.Build) void {
     libc.addIncludePath(.{ .path = "newlib/libc/sys" });
     libc.addIncludePath(.{ .path = "newlib/libc/locale" });
     libc.addIncludePath(.{ .path = "extensions/include" });
+    libc.addIncludePath(.{ .path = "extensions/internal" });
     const tinystdio = true;
     if (tinystdio) {
         libc.addIncludePath(.{ .path = "newlib/libc/tinystdio" });
