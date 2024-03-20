@@ -411,6 +411,7 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/dso_handle.c",
             "newlib/libc/picolib/getauxval.c",
             "extensions/bind.c",
+            "newlib/libc/ctype/isxdigit.c",
         },
         // @ivanv: the format is dependent on picolibc.h
         .flags = &.{
