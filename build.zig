@@ -412,6 +412,7 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/getauxval.c",
             "extensions/bind.c",
             "newlib/libc/ctype/isxdigit.c",
+            "newlib/libc/time/time.c",
         },
         // @ivanv: the format is dependent on picolibc.h
         .flags = &.{
