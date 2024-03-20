@@ -411,6 +411,7 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/dso_handle.c",
             "newlib/libc/picolib/getauxval.c",
             "extensions/bind.c",
+            "extensions/getpid.c",
             "newlib/libc/ctype/isxdigit.c",
             "newlib/libc/time/time.c",
         },
