@@ -1,10 +1,6 @@
-#include <errno.h>
+#ifndef SYSCALL_RET_H
+#define SYSCALL_RET_H
 
-long __syscall_ret(unsigned long r)
-{
-	if (r > -4096UL) {
-		errno = -r;
-		return -1;
-	}
-	return r;
-}
+long __syscall_ret(unsigned long r);
+
+#endif
