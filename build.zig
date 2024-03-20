@@ -410,7 +410,6 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/picosbrk.c",
             "newlib/libc/picolib/dso_handle.c",
             "newlib/libc/picolib/getauxval.c",
-            "extensions/libnfs/socket.c",
         },
         // @ivanv: the format is dependent on picolibc.h
         .flags = &.{
